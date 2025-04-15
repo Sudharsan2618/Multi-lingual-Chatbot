@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice Assistant with WebRTC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Voice Assistant</h1>
+        <div class="controls">
+            <button id="startBtn" class="btn">Start Connection</button>
+            <button id="stopBtn" class="btn" disabled>Stop Connection</button>
+            <!-- The mic button will be added dynamically -->
+        </div>
+        <div class="status-container">
+            <div id="statusIndicator" class="status"></div>
+            <div id="statusText">Ready</div>
+        </div>
+        <div class="text-input-container">
+            <textarea id="textInput" placeholder="Type your message here..." rows="3"></textarea>
+            <button id="sendTextBtn" class="btn" disabled>Send Text</button>
+        </div>
+        <div class="transcript-container">
+            <h2>Conversation</h2>
+            <div id="transcript"></div>
+        </div>
+    </div>
+
+    <script src="scripts/webrtc.js"></script>
+    <script src="scripts/ui.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
